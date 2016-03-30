@@ -1,14 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <VoiceCommands xmlns="http://schemas.microsoft.com/voicecommands/1.2">
-  <CommandSet xml:lang="en-us" Name="Azure IoT Robot">
-    <CommandPrefix>Robot</CommandPrefix>
-    <Example>Robot wave</Example>
-    <Command Name="robot">
-      <Example>Robot {message}</Example>
-      <ListenFor RequireAppName="BeforeOrAfterPhrase">robot {streamSubject}</ListenFor>
-      <Feedback>sending command {streamSubject} to robot</Feedback>
+  <CommandSet xml:lang="en-us" Name="RobotControl">
+    <CommandPrefix>Robot control</CommandPrefix>
+    <Example> Robot control wave </Example>
+    <Command Name="command">
+      <Example> Robot control wave </Example>
+      <ListenFor>{command}</ListenFor>
+      <Feedback>sending command {command} to robot</Feedback>
       <Navigate Target="/default.aspx"/>
     </Command>
-    <PhraseTopic Label="streamSubject" Scenario="Dictation"></PhraseTopic>
+    <PhraseTopic Label="command" Scenario="Dictation">
+      <Subject> pause </Subject>   
+      <Subject> cancel </Subject>   
+      <Subject> resume </Subject>   
+      <Subject> home </Subject>   
+      <Subject> up down </Subject>   
+      <Subject> taps </Subject>   
+      <Subject> stress </Subject>   
+      <Subject> wave </Subject>   
+      <Subject> steps </Subject>   
+    </PhraseTopic>
   </CommandSet>
 </VoiceCommands>
