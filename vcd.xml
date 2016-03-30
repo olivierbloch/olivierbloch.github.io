@@ -4,8 +4,8 @@
     <CommandPrefix>IoT Robot</CommandPrefix>
     <Example>IoT Robot voice controller</Example>
     <Command Name="robot">
-      <Example>{message} robot</Example>
-      <ListenFor RequireAppName="BeforeOrAfterPhrase">{streamSubject} robot</ListenFor>
+      <Example>{message}</Example>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase">{streamSubject}</ListenFor>
       <Feedback>sending command {streamSubject} to robot</Feedback>
       <Navigate Target="/default.aspx"/>
     </Command>
