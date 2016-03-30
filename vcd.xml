@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VoiceCommands xmlns="http://schemas.microsoft.com/voicecommands/1.2">
+  <CommandSet xml:lang="en-us" Name="RobotControl">
+    <CommandPrefix>IoT Robot</CommandPrefix>
+    <Example>IoT Robot voice controller</Example>
+    <Command Name="robot">
+      <Example>{message} robot</Example>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase">{streamSubject} robot</ListenFor>
+      <Feedback>sending command {streamSubject} to robot</Feedback>
+      <Navigate Target="/default.aspx"/>
+    </Command>
+    <PhraseTopic Label="streamSubject" Scenario="Dictation"></PhraseTopic>
+  </CommandSet>
+</VoiceCommands>
