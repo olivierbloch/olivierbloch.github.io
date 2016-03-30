@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <VoiceCommands xmlns="http://schemas.microsoft.com/voicecommands/1.2">
   <CommandSet xml:lang="en-us" Name="Azure IoT Robot">
-    <CommandPrefix>Azure robot</CommandPrefix>
-    <Example>IoT Robot voice controller</Example>
+    <CommandPrefix>Robot</CommandPrefix>
+    <Example>Robot wave</Example>
     <Command Name="robot">
-      <Example>Azure robot {message}</Example>
-      <ListenFor RequireAppName="BeforeOrAfterPhrase">{streamSubject}</ListenFor>
+      <Example>Robot {message}</Example>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase">robot {streamSubject}</ListenFor>
       <Feedback>sending command {streamSubject} to robot</Feedback>
       <Navigate Target="/default.aspx"/>
     </Command>
